@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <button id="add-row">Add Row</button>
+
+        <form method="post" action="/home/addpeople">
+            <div id="rows-div">
+                <div class="row">
+                    <div class="col-md-4">
+                        <input type="text" placeholder="First Name" name="people[0].firstname" class="form-control" />
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" placeholder="Last Name" name="people[0].lastname" class="form-control" />
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" placeholder="Age" name="people[0].age" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <button>Submit</button>
+        </form>
+    </div>
+</div>
+
+@section scripts {
+    <script src="/Scripts/index.js"></script>
+}
